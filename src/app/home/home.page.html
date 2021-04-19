@@ -12,9 +12,32 @@
       <ion-title size="large">Blank</ion-title>
     </ion-toolbar>
   </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-label position="floating">Floating Label</ion-label>
+  <ion-input [(ngModel)]="Mensaje"></ion-input>
+  <ion-button (click)="showMensaje()" color="primary">Primary</ion-button>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-label position="floating">Valor 1</ion-label>
+        <ion-input type="number" [(ngModel)]="op.value1"></ion-input>
+      </ion-col>
+      <ion-col>
+        <ion-label position="floating">Valor 2</ion-label>
+        <ion-input type="number" [(ngModel)]="op.value2"></ion-input>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button (click)="sumar()" color="success">Sumar</ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        Resultado
+      </ion-col>
+      <ion-col>
+        {{ resultado }}
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
